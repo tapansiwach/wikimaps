@@ -1,5 +1,5 @@
 INSERT INTO maps (owner_id, title, city, lat, long, zoom, created_on, modified_on) VALUES (1,'quis libero nullam','Bibrka',63.20418,9.93994,8,'2020-04-13','2021-09-06');
-INSERT INTO maps (owner_id, title, city, lat, long, zoom, created_on, modified_on) VALUES (1,'eget massa','Zhongwei',20.90596,71.88829,7,'2018-11-07','2021-09-06');
+INSERT INTO maps (owner_id, title, city, lat, long, zoom, created_on, modified_on) VALUES (1,'eget massa','Zhongwei',21.02170,71.74800,7,'2018-11-07','2021-09-06');
 INSERT INTO maps (owner_id, title, city, lat, long, zoom, created_on, modified_on) VALUES (12,'eu orci mauris','Georgīevka',67.24196,13.47088,6,'2017-05-13','2021-09-15');
 INSERT INTO maps (owner_id, title, city, lat, long, zoom, created_on, modified_on) VALUES (15,'tincidunt ante vel ipsum','Vallecillo',41.9187,37.37731,8,'2020-01-21','2021-09-14');
 INSERT INTO maps (owner_id, title, city, lat, long, zoom, created_on, modified_on) VALUES (10,'eu mi nulla ac','Lâm Thao',67.45428,11.831,8,'2021-07-05','2021-09-07');
