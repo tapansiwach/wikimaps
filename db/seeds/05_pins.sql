@@ -1,0 +1,3 @@
+INSERT INTO pins (title, description, img_url, lat, long, map_id, user_id) VALUES ('Example pin', 'Description goes here.', "https://designobserver.com/media/images/mondrian/39878-DelicatessenChungsClose72900-1_m.jpg", 63.20417, 9.93993, 1, 1);
+INSERT INTO pins (title, description, img_url, lat, long, map_id, user_id) VALUES ('Example pin', 'Description goes here.', "https://i.imgur.com/GmdNUpB.png", 63.20413, 9.93988, 1, 2);
+INSERT INTO pins (title, description, img_url, lat, long, map_id, user_id) VALUES ('Example pin', 'Description goes here.', "https://i.imgur.com/H4nLdH0.png", 63.20409, 9.93999, 1, 3);

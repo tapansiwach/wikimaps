@@ -1,4 +1,3 @@
-
 INSERT INTO users (user_name, first_name, last_name, email, profile_pic_url) VALUES ("dbulford0","Dell","Bulford","dbulford0@aboutads.info","http://dummyimage.com/108x100.png/ff4444/ffffff");
 INSERT INTO users (user_name, first_name, last_name, email, profile_pic_url) VALUES ("kfenge1","Kelsy","Fenge","kfenge1@hubpages.com","http://dummyimage.com/124x100.png/ff4444/ffffff");
 INSERT INTO users (user_name, first_name, last_name, email, profile_pic_url) VALUES ("ncoumbe2","Northrop","Coumbe","ncoumbe2@google.cn","http://dummyimage.com/180x100.png/5fa2dd/ffffff");
