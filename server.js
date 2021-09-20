@@ -33,6 +33,7 @@ app.use(express.static("public"));
 const usersRoutes = require("./routes/users");
 const widgetsRoutes = require("./routes/widgets");
 const mapRouter = require('./routes/map-router');
+const pinRouter = require('./routes/pin-router');
 const userRouter = require('./routes/user-router');
 
 // Mount all resource routes
@@ -40,6 +41,7 @@ const userRouter = require('./routes/user-router');
 app.use("/api/users", usersRoutes(db)); // TODO remove this if our routes work.
 app.use("/api/widgets", widgetsRoutes(db)); // TODO remove this if our routes work.
 app.use('/maps', mapRouter);
+app.use('/pins', pinRouter);
 app.use('/users', userRouter);
 // Note: mount other resources here, using the same pattern above
 
