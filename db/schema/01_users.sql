@@ -1,4 +1,5 @@
--- Drop and recreate Users table (Example)
+-- Drop widgets table from boilerplate
+DROP TABLE IF EXISTS widgets CASCADE;
 
 DROP TABLE IF EXISTS users CASCADE;
 CREATE TABLE users (
