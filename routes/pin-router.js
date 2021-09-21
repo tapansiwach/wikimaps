@@ -12,7 +12,7 @@ router.get('/pin/:pin_id', (req, res) => {
 
 // GET /pins/map/:map_id
 router.get('/map/:map_id', (req, res) => {
-  pinQueries.getMapById(req.params.map_id)
+  pinQueries.getPinsByMap(req.params.map_id)
     .then((pins) => {
       res.json(pins);
     });
