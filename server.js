@@ -47,22 +47,22 @@ app.use('/pins', pinRouter);
 app.use('/users', userRouter);
 // Note: mount other resources here, using the same pattern above
 
-// TODO this breaks if I change the path to /temp/mine
-app.get("/temp-mine", (req, res) => {
-  userQueries.getMapsByOwner(1)
-    .then( (maps) => {
-      mapQueries.getAuthorizedUsersByMap(maps[0].id)
-        .then( (collabs) => {
-          res.render("temp-my-maps", {collabs, maps, renderMapsFromData: require('./lib/myMapsHelper')});
-        })
-    })
-});
-
 // Home page
 // Warning: avoid creating more routes in this file!
 // Separate them into separate routes files (see above).
+
 app.get("/", (req, res) => {
   res.render("index");
+});
+
+const mapQueries = require("./db/map-queries")
+app.get("/:map_id", (req, res) => {
+  mapQueries.getMapById(req.params.map_id)
+    .then((map) => {
+      // res.json(map);
+      const key = process.env.MAP_API_KEY;
+      res.render('view-map', { map, key });
+    });
 });
 
 app.listen(PORT, () => {
