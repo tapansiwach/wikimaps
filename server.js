@@ -53,6 +53,10 @@ app.get("/", (req, res) => {
   res.render("index");
 });
 
+app.get("/create-map", (req, res) => {
+  res.render("create-map");
+});
+
 const mapQueries = require("./db/map-queries")
 app.get("/:map_id", (req, res) => {
   mapQueries.getMapById(req.params.map_id)
