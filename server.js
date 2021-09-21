@@ -9,6 +9,8 @@ const bodyParser = require("body-parser");
 const sass = require("node-sass-middleware");
 const app = express();
 const morgan = require('morgan');
+const mapQueries = require('./db/map-queries')
+const userQueries = require('./db/user-queries')
 
 // PG database client/connection setup
 const db = require('./db/db');
@@ -45,6 +47,16 @@ app.use('/pins', pinRouter);
 app.use('/users', userRouter);
 // Note: mount other resources here, using the same pattern above
 
+// TODO this breaks if I change the path to /temp/mine
+app.get("/temp-mine", (req, res) => {
+  userQueries.getMapsByOwner(1)
+    .then( (maps) => {
+      mapQueries.getAuthorizedUsersByMap(maps[0].id)
+        .then( (collabs) => {
+          res.render("temp-my-maps", {collabs, maps, renderMapsFromData: require('./lib/myMapsHelper')});
+        })
+    })
+});
 
 // Home page
 // Warning: avoid creating more routes in this file!
