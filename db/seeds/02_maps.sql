@@ -1,7 +1,7 @@
-INSERT INTO maps (owner_id, title, city, lat, long, zoom, created_on, modified_on) VALUES (1,'quis libero nullam','Bibrka',63.20418,9.93994,15,'2020-04-13','2021-09-06');
-INSERT INTO maps (owner_id, title, city, lat, long, zoom, created_on, modified_on) VALUES (1,'eget massa','Zhongwei',21.02170,71.74800,15,'2018-11-07','2021-09-06');
-INSERT INTO maps (owner_id, title, city, lat, long, zoom, created_on, modified_on) VALUES (12,'eu orci mauris','Georgīevka',67.24196,13.47088,15,'2017-05-13','2021-09-15');
-INSERT INTO maps (owner_id, title, city, lat, long, zoom, created_on, modified_on) VALUES (15,'tincidunt ante vel ipsum','Vallecillo',41.9187,37.37731,15,'2020-01-21','2021-09-14');
+INSERT INTO maps (owner_id, title, city, lat, long, zoom, created_on, modified_on) VALUES (1,'Troll sighting locations','Skaun',63.20418,9.93994,15,'2020-04-13','2021-09-06');
+INSERT INTO maps (owner_id, title, city, lat, long, zoom, created_on, modified_on) VALUES (1,'Interesting warehouses','Gadhada',21.02170,71.74800,15,'2018-11-07','2021-09-06');
+INSERT INTO maps (owner_id, title, city, lat, long, zoom, created_on, modified_on) VALUES (12,'Dinosaur sightings','Isla del Coco',5.53057,-87.06094,15,'2017-05-13','2021-09-15');
+INSERT INTO maps (owner_id, title, city, lat, long, zoom, created_on, modified_on) VALUES (15,'TU Running Trails','San Antonio',29.46245,-98.48298,15,'2020-01-21','2021-09-14');
 INSERT INTO maps (owner_id, title, city, lat, long, zoom, created_on, modified_on) VALUES (10,'eu mi nulla ac','Lâm Thao',67.45428,11.831,13,'2021-07-05','2021-09-07');
 INSERT INTO maps (owner_id, title, city, lat, long, zoom, created_on, modified_on) VALUES (2,'ipsum integer a','Gombong',13.33505,38.9242,13,'2020-08-11','2021-09-11');
 INSERT INTO maps (owner_id, title, city, lat, long, zoom, created_on, modified_on) VALUES (19,'odio elementum eu','Aginskoye',31.43324,70.22577,13,'2019-08-24','2021-09-04');
