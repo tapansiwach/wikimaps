@@ -14,7 +14,8 @@ router.get('/:map_id/authorized-users', (req, res) => {
 router.get('/:map_id', (req, res) => {
   mapQueries.getMapById(req.params.map_id)
     .then((map) => {
-      res.json(map);
+      // res.json(map);
+      res.render('view-map', { map });
     });
 });
 
