@@ -22,8 +22,8 @@ router.get('/:map_id', (req, res) => {
 router.get('/', (req, res) => {
   mapQueries.getMaps()
     .then((maps) => {
-      // res.render();
-      res.json(maps);
+      // res.json(maps);
+      res.render('all-maps', { maps });
     });
 });
 
