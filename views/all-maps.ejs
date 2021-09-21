@@ -56,7 +56,8 @@
                             <tr>
                               <td><img class="rounded-circle me-2" width="30" height="30"
                                   src="<%= map.profile_pic_url %>">
-                                <%= map.first_name %> <%= map.last_name %>
+                                <%= map.first_name %>
+                                  <%= map.last_name %>
                               </td>
                               <td>
                                 <%= map.title %>
@@ -66,10 +67,12 @@
                               </td>
                               <td><i class="fa fa-heart-o"></i></td>
                               <td>
-                                <%= map.created_on %>
+                                <%= map.created_on.getFullYear() + '/' + map.created_on.getMonth() + '/' +
+                                  map.created_on.getDate() %>
                               </td>
                               <td>
-                                <%= map.modified_on %>
+                                <%= map.modified_on.getFullYear() + '/' + map.modified_on.getMonth() + '/' +
+                                  map.modified_on.getDate() %>
                               </td>
                             </tr>
                             <% } %>
