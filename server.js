@@ -9,8 +9,9 @@ const bodyParser = require("body-parser");
 const sass = require("node-sass-middleware");
 const app = express();
 const morgan = require('morgan');
-const mapQueries = require('./db/map-queries')
 const userQueries = require('./db/user-queries')
+const mapQueries = require("./db/map-queries")
+
 
 // PG database client/connection setup
 const db = require('./db/db');
@@ -55,7 +56,6 @@ app.get("/", (req, res) => {
   res.render("index");
 });
 
-const mapQueries = require("./db/map-queries")
 app.get("/:map_id", (req, res) => {
   mapQueries.getMapById(req.params.map_id)
     .then((map) => {
@@ -63,6 +63,17 @@ app.get("/:map_id", (req, res) => {
       const key = process.env.MAP_API_KEY;
       res.render('view-map', { map, key });
     });
+});
+
+// TODO this breaks if I change the path to /temp/mine
+app.get("/temp-mine", (req, res) => {
+  userQueries.getMapsByOwner(1)
+    .then( (maps) => {
+      mapQueries.getAuthorizedUsersByMap(maps[0].id)
+        .then( (collabs) => {
+          res.render("temp-my-maps", {collabs, maps, renderMapsFromData: require('./lib/myMapsHelper')});
+        })
+    })
 });
 
 app.listen(PORT, () => {
