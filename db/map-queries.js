@@ -42,6 +42,27 @@ const insertMap = (owner_id, title, city, lat, long, zoom, created_on, modified_
     });
 };
 
+const getMapsAndAuthorizationsFromUser = (user_id) => {
+  const mapArray = [];
+  return db.query(`SELECT * FROM maps WHERE owner_id = $1`, [user_id])
+    .then( maps  => {
+      for (const map of maps.rows) {
+        const fullMap = { maps: map };
+        return db.query(`SELECT users.*, maps.id as map_id
+                        FROM users
+                        JOIN authorizations ON users.id = authorizations.user_id
+                        JOIN maps ON maps.id = authorizations.map_id
+                        WHERE maps.id = $1;
+          `, [map.id])
+          .then( result => {
+            fullMap.collaborators = result.rows;
+            mapArray.push(fullMap);
+          })
+      }
+      return mapArray;
+    })
+}
+
 module.exports = {
   getMaps,
   getMapById,

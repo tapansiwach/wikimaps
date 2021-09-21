@@ -9,6 +9,9 @@ const bodyParser = require("body-parser");
 const sass = require("node-sass-middleware");
 const app = express();
 const morgan = require('morgan');
+const userQueries = require('./db/user-queries')
+const mapQueries = require("./db/map-queries")
+
 
 // PG database client/connection setup
 const db = require('./db/db');
