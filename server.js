@@ -69,6 +69,14 @@ app.get("/create-map", (req, res) => {
   res.render("create-map");
 });
 
+app.get("/profile", (req, res) => {
+  userQueries.getUserById(1)
+    .then(user => {
+      console.log(user);
+      res.render("profile", {user});
+    })
+});
+
 app.get("/:map_id", (req, res) => {
   mapQueries.getMapById(req.params.map_id)
     .then((map) => {
