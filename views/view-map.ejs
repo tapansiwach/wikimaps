@@ -33,9 +33,12 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="card-body"><iframe allowfullscreen="" frameborder="0" loading="lazy"
-                                    src="https://www.google.com/maps/embed/v1/place?key=INJECT-YOUR-GOOGLE-MAPS-API-KEY-HERE&amp;q=Paris%2C+France&amp;zoom=11"
-                                    width="100%" height="600"></iframe></div>
+                            <div class="card-body">
+                              <iframe allowfullscreen="" frameborder="0" loading="lazy"
+                              src="https://www.google.com/maps/embed/v1/view?key=<%=process.env.MAP_API_KEY%>&center=<%=map.lat%>,<%=map.long%>&zoom=<%=map.zoom%>"
+                              width="100%" height="600"></iframe>
+                            </div>
+
                         </div>
                     </div>
                 </div>
