@@ -23,11 +23,25 @@ const getAuthorizedUsersByMap = (map_id) => {
   `, [map_id])
     .then((response) => {
       return response.rows;
-    })
-}
+    });
+};
+
+const insertMap = (owner_id, title, city, lat, long, zoom, created_on, modified_on) => {
+  return db.query(`INSERT INTO maps (owner_id, title, city, lat, long, zoom, created_on, modified_on)
+                    VALUES ($1,
+                    $2,$3,
+                    $4, $5, $6,
+                    $7, $8) RETURNING *;
+
+  `, [owner_id, title, city, lat, long, zoom, created_on, modified_on])
+    .then((response) => {
+      return response.rows;
+    });
+};
 
 module.exports = {
   getMaps,
   getMapById,
-  getAuthorizedUsersByMap
+  getAuthorizedUsersByMap,
+  insertMap
 };

@@ -27,4 +27,13 @@ router.get('/', (req, res) => {
     });
 });
 
+// POST /maps/
+router.post('/', (req, res) => {
+  const {owner_id, title, city, lat, long, zoom, created_on, modified_on} = req.body;
+  mapQueries.insertMap(owner_id, title, city, lat, long, zoom, created_on, modified_on)
+    .then((map) => {
+      res.json(map);
+    });
+});
+
 module.exports = router;
