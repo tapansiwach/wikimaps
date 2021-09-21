@@ -11,6 +11,7 @@ const app = express();
 const morgan = require('morgan');
 const userQueries = require('./db/user-queries')
 const mapQueries = require("./db/map-queries")
+const combinedQueries = require("./db/combined-queries")
 
 
 // PG database client/connection setup
@@ -56,6 +57,14 @@ app.get("/", (req, res) => {
   res.render("index");
 });
 
+app.get("/my-maps", (req, res) => {
+  combinedQueries.getMyMaps(1)
+    .then(maps => {
+      console.log(maps);
+      res.render('my-maps', { maps })
+    });
+});
+
 app.get("/create-map", (req, res) => {
   res.render("create-map");
 });
@@ -68,8 +77,6 @@ app.get("/:map_id", (req, res) => {
       res.render('view-map', { map, key });
     });
 });
-
-
 
 app.listen(PORT, () => {
   console.log(`Example app listening on port ${PORT}`);
