@@ -28,4 +28,27 @@ const getMyMaps = async (owner_id) => {
 };
 
 
-module.exports = { getMyMaps };
+
+const getMapWithPins = async (map_id) => {
+
+  let result;
+  // get the map associated with the id
+  const map = await db.query(`
+  SELECT * FROM maps WHERE id = $1;
+  `, [map_id]);
+  result = map.rows[0];
+  console.log(result);
+
+  // get pins associated with the map
+  const pins = await db.query(`
+  SELECT * FROM pins WHERE map_id = $1;
+  `, [map_id]);
+
+  console.log(pins.rows);
+  result.pins = pins.rows;
+  console.log(result);
+  return result;
+}
+
+
+module.exports = { getMyMaps, getMapWithPins };

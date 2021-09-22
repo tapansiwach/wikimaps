@@ -11,6 +11,7 @@ const app = express();
 const morgan = require('morgan');
 const userQueries = require('./db/user-queries')
 const mapQueries = require("./db/map-queries")
+const pinQueries = require("./db/pin-queries")
 const combinedQueries = require("./db/combined-queries")
 
 
@@ -95,17 +96,18 @@ app.get("/profile", (req, res) => {
 });
 
 app.get("/test-map:map_id", (req, res) => {
-  mapQueries.getMapById(req.params.map_id)
+  combinedQueries.getMapWithPins(req.params.map_id)
     .then(map => {
       const key = process.env.MAP_API_KEY;
       res.render('map-without-iframe/test-map-original', { map, key });
-    })
+    });
 });
 
-app.post("/new-pin", (req, res) => {
-  console.log(req.body);
-
-});
+// app.post("/new-pin", (req, res) => {
+//   console.log(req.body);
+//   res.json(req.body);
+//   // pinQueries.addPin(req.body);
+// });
 
 // app.get("/:map_id", (req, res) => {
 //   mapQueries.getMapById(req.params.map_id)

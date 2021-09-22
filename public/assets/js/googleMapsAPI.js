@@ -94,6 +94,7 @@ function initMap() {
             aria-describedby="description" placeholder="Description..." name="description"></div>
         <div class="mb-3"><input class="form-control " type="text" id="newPinImageUrl"
             aria-describedby="image-url" placeholder="Url for Image..." name="image_url"></div>
+        <input type="hidden" name="map_id" value="${this.id}">
 
         <button class="btn btn-primary d-block btn-user w-100" type="submit">Create
           Pin</button>
