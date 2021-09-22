@@ -77,6 +77,14 @@ app.get("/profile", (req, res) => {
     })
 });
 
+app.get("/test-map:map_id", (req, res) => {
+  mapQueries.getMapById(req.params.map_id)
+    .then(map => {
+      const key = process.env.MAP_API_KEY;
+      res.render('map-without-iframe/test-map-original', {map, key});
+    })
+});
+
 app.get("/:map_id", (req, res) => {
   mapQueries.getMapById(req.params.map_id)
     .then((map) => {
