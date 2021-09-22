@@ -75,6 +75,112 @@
               </div>
             </div>
 
+            <!-- Collaborating on: -->
+            <div class="container-fluid" style="margin: 0px 0px 24px;">
+              <div class="card shadow">
+                  <div class="card-header py-3">
+                      <p class="text-primary m-0 fw-bold">Collaborating On</p>
+                  </div>
+                  <div class="card-body">
+
+                      <div class="table-responsive table mt-2" id="dataTable-1" role="grid"
+                          aria-describedby="dataTable_info">
+                          <table class="table my-0" id="dataTable">
+                              <thead>
+                                  <tr>
+                                      <th>Map Owner</th>
+                                      <th>Map Title</th>
+                                      <th>City</th>
+                                      <th><i class="fa fa-heart" style="color: rgb(231,74,58);"></i></th>
+                                      <th>Last Update</th>
+                                      <th>Stop Collaborating</th>
+                                  </tr>
+                              </thead>
+                              <tbody>
+                                <% for (const authMap of authMaps) { %>
+                                  <tr>
+                                    <td><img class="rounded-circle me-2" width="30" height="30" src="<%=authMap.owner_pic%>"><%=authMap.owner_first%> <%=authMap.owner_last%></td>
+                                    <td><%=authMap.title%></td>
+                                    <td><%=authMap.city%> </td>
+                                    <% if (faveIds.includes(authMap.id)) { %>
+                                      <td><i class="fa fa-heart" style="color: rgb(231,74,58);"></i></td>
+                                      <% } else { %>
+                                    <td><i class="fa fa-heart-o"></i></td>
+                                    <% } %>
+                                    <td><%= authMap.modified_on.getFullYear() + "/" + authMap.modified_on.getMonth() + "/" +
+                                      authMap.modified_on.getDate() %> </td>
+                                    <td><a class="btn btn-warning btn-icon-split" role="button"><span
+                                      class="text-white-50 icon"><i
+                                          class="fas fa-unlink"></i></span><span
+                                      class="text-white text">Unlink</span></a></td>
+                                  </tr>
+                                <% } %>
+
+                              </tbody>
+                              <tfoot>
+                                  <tr>
+                                      <td><strong>Map Owner</strong></td>
+                                      <td><strong>Map Title</strong></td>
+                                      <td><strong>City</strong></td>
+                                      <td><i class="fa fa-heart" style="color: rgb(231,74,58);"></i></td>
+                                      <td><strong>Last Update</strong></td>
+                                      <td><strong>Stop Collaborating</strong></td>
+                                  </tr>
+                              </tfoot>
+                          </table>
+                      </div>
+
+
+                  </div>
+              </div>
+          </div>
+
+          <!-- Favorites -->
+          <div class="container-fluid">
+            <div class="card shadow">
+                <div class="card-header py-3">
+                    <p class="text-primary m-0 fw-bold">Favorited</p>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive table mt-2" id="dataTable-2" role="grid"
+                        aria-describedby="dataTable_info">
+                        <table class="table my-0" id="dataTable">
+                            <thead>
+                                <tr>
+                                    <th>Map Owner</th>
+                                    <th>Map Title</th>
+                                    <th>City</th>
+                                    <th><i class="fa fa-heart" style="color: rgb(231,74,58);"></i></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                              <% for( const fave of favorites ) { %>
+                                <tr>
+                                  <td><img class="rounded-circle me-2" width="30" height="30" src="<%=fave.owner_pic%>"><%=fave.owner_first%> <%=fave.owner_last%></td>
+                                  <td><%= fave.title %> </td>
+                                  <td><%= fave.city %> </td>
+                                  <td><i class="fas fa-heart" style="color: rgb(231,74,58);"></i></td>
+
+                                </tr>
+
+                              <% } %>
+
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td><strong>Map Owner</strong></td>
+                                    <td><strong>Map Title</strong></td>
+                                    <td><strong>City</strong></td>
+                                    <td><i class="fa fa-heart" style="color: rgb(231,74,58);"></i></td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
 
 
         </div>

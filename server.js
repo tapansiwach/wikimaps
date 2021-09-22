@@ -61,7 +61,20 @@ app.get("/my-maps", (req, res) => {
   combinedQueries.getMyMaps(1)
     .then(maps => {
       console.log(maps);
-      res.render('my-maps', { maps })
+      // This is a little ugly again, but gets us the full functionality
+      // on a single page load by preloading all the different queries
+      // we will require.
+      userQueries.getAuthorizedMapsByUser(1)
+        .then(authMaps => {
+          // This is getting out of hand. Now there are three of them.
+          // Promises were supposed to fix callback hell, not join them!
+          // Maybe we should refactor this to using async / await instead?
+          userQueries.getFavoritesFromUser(1)
+            .then(favorites => {
+              const faveIds = userQueries.userFavoriteIDs(favorites);
+              res.render('my-maps', { maps, authMaps, favorites, faveIds})
+            })
+        })
     });
 });
 
