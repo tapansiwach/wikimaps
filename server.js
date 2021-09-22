@@ -61,7 +61,13 @@ app.get("/my-maps", (req, res) => {
   combinedQueries.getMyMaps(1)
     .then(maps => {
       console.log(maps);
-      res.render('my-maps', { maps })
+      // This is a little ugly again, but gets us the full functionality
+      // on a single page load by preloading all the different queries
+      // we will require.
+      userQueries.getAuthorizedMapsByUser(1)
+        .then(authMaps => {
+          res.render('my-maps', { maps, authMaps })
+        })
     });
 });
 

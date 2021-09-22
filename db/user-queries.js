@@ -39,11 +39,12 @@ const getFavoritesFromUser = (user_id) => {
 }
 
 const getAuthorizedMapsByUser = (user_id) => {
-  return db.query(`SELECT maps.*
-                    FROM users
-                    JOIN authorizations ON users.id = authorizations.user_id
+  return db.query(`SELECT maps.*, u2.first_name as owner_first, u2.last_name as owner_last, u2.profile_pic_url as owner_pic
+                    FROM users u1
+                    JOIN authorizations ON u1.id = authorizations.user_id
                     JOIN maps ON maps.id = authorizations.map_id
-                    WHERE users.id = $1;
+                    JOIN users u2 ON u2.id = maps.owner_id
+                    WHERE u1.id = $1;
   `, [user_id])
     .then((response) => {
       return response.rows;
