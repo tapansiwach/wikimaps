@@ -24,10 +24,18 @@ const getPinsByMap = (map_id) => {
     .then((response) => {
       return response.rows;
     })
+};
+
+const addPin = (pin) => {
+  return db.query(`
+  INSERT INTO pins (title, description, img_url, lat, long, map_id)
+  VALUES ($1, $2, $3, $4, $5, $6);
+  `, [pin.title, pin.description, pin.image_url, pin.latitude, pin.longitude, pin.map_id]);
 }
 
 module.exports = {
   getPins,
   getPin,
-  getPinsByMap
+  getPinsByMap,
+  addPin
 };
