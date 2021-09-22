@@ -78,6 +78,10 @@ app.get("/my-maps", (req, res) => {
     });
 });
 
+app.get("/some-temp", (req, res) => {
+  res.render('temp-modal');
+})
+
 app.get("/create-map", (req, res) => {
   res.render("create-map");
 });
