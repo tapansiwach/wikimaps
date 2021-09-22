@@ -4,21 +4,17 @@ let map;
 // let lngg;
 // let zoomm;
 
-function setVariables(id, latt, lngg, zoomm) {
-  console.log(id, latt, lngg, zoomm);
-  this.id = id;
-  this.latt = latt;
-  this.lngg = lngg;
-  this.zoomm = zoomm;
-  console.log(this.id, this.latt, this.lngg, this.zoomm);
-}
-
-
-
 function initMap() {
-  const mapLatLng = { lat: this.latt, lng: this.lngg };
-  const map = new google.maps.Map(document.getElementById("map"), {
-    zoom: this.zoomm,
+
+  const element = document.getElementById("map");
+  let data = element.getAttribute("data-map");
+  data = JSON.parse(data);
+
+  console.log(data);
+  const mapLatLng = { lat: data.lat, lng: data.long };
+
+  const map = new google.maps.Map(element, {
+    zoom: data.zoom,
     center: mapLatLng,
   });
   // Create the initial InfoWindow.
