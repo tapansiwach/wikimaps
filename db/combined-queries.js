@@ -12,7 +12,7 @@ const getMyMaps = async (owner_id) => {
   for (const map of userMaps.rows) {
     // get the collaborators for that map
     const collaborators = await db.query(`
-    SELECT users.first_name, users.last_name, users.id, maps.title, maps.city, maps.created_on
+    SELECT users.first_name, users.last_name, users.id, users.profile_pic_url, maps.title, maps.city, maps.created_on
     FROM maps
       JOIN authorizations ON maps.id = authorizations.map_id
       JOIN users ON authorizations.user_id = users.id
