@@ -10,8 +10,6 @@ function setCoords(latt,lngg, zoomm){
 }
 
 var GoogleMaps = GoogleMaps || {};
-const lati = -34.397;
-const longi = 150.644
 
 GoogleMaps.initMap = function () {
   return function () {
@@ -20,18 +18,4 @@ GoogleMaps.initMap = function () {
       zoom: this.zoomm,
     });
   }()
-}
-
-function initMapOriginal() {
-  map = new google.maps.Map(document.getElementById("map"), {
-    center: { lat: -34.397, lng: 150.644 },
-    zoom: 8,
-  });
-}
-
-function returnInit() {
-}
-
-function initialize() {
-  return returnInit;
 }
