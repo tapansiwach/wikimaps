@@ -99,15 +99,16 @@ app.get("/test-map:map_id", (req, res) => {
   combinedQueries.getMapWithPins(req.params.map_id)
     .then(map => {
       const key = process.env.MAP_API_KEY;
+      console.log("map being passed to the template:", map);
       res.render('map-without-iframe/test-map-original', { map, key });
     });
 });
 
-// app.post("/new-pin", (req, res) => {
-//   console.log(req.body);
-//   res.json(req.body);
-//   // pinQueries.addPin(req.body);
-// });
+app.post("/new-pin", (req, res) => {
+  console.log(req.body);
+  res.json(req.body);
+  // pinQueries.addPin(req.body);
+});
 
 // app.get("/:map_id", (req, res) => {
 //   mapQueries.getMapById(req.params.map_id)

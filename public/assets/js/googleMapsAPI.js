@@ -1,10 +1,11 @@
 let map;
-let mapid;
-let latt;
-let lngg;
-let zoomm;
+// let mapid;
+// let latt;
+// let lngg;
+// let zoomm;
 
 function setVariables(id, latt, lngg, zoomm) {
+  console.log(id, latt, lngg, zoomm);
   this.id = id;
   this.latt = latt;
   this.lngg = lngg;
@@ -12,56 +13,18 @@ function setVariables(id, latt, lngg, zoomm) {
   console.log(this.id, this.latt, this.lngg, this.zoomm);
 }
 
-// var GoogleMaps = GoogleMaps || {};
-
-// GoogleMaps.initMap = function() {
-//   return function() {
-//     map = new google.maps.Map(document.getElementById("map"), {
-//       center: { lat: this.latt, lng: this.lngg },
-//       zoom: this.zoomm,
-//     });
-
-//     // Create the initial InfoWindow.
-//     let infoWindow = new google.maps.InfoWindow({
-//       content: "Click the map to get Lat/Lng!",
-//       position: myLatlng,
-//     });
-
-//     infoWindow.open(map);
-
-//   }()
-// }
-
-const addPin = function(event) {
-  event.preventDefault();
-
-  const form = document.querySelector("form.new-pin");
-  console.log(form);
-
-  const data = {
-    title: form.title.value,
-    latitude: form.latitude.value,
-    longitude: form.longitude.value,
-    description: form.description.value,
-    image_url: form.image_url.value,
-    map_id: this.id
-  }
-
-  console.log(data);
-
-};
 
 
 function initMap() {
-  const myLatlng = { lat: this.latt, lng: this.lngg };
+  const mapLatLng = { lat: this.latt, lng: this.lngg };
   const map = new google.maps.Map(document.getElementById("map"), {
     zoom: this.zoomm,
-    center: myLatlng,
+    center: mapLatLng,
   });
   // Create the initial InfoWindow.
   let infoWindow = new google.maps.InfoWindow({
     content: `Add a Pin by clicking the map`,
-    position: myLatlng,
+    position: mapLatLng,
   });
 
   infoWindow.open(map);
@@ -72,11 +35,11 @@ function initMap() {
     const coords = mapsMouseEvent.latLng.toJSON();
     console.log(coords);
 
-    const marker = new google.maps.Marker({
-      position: coords,
-      map,
-      title: "New Pin",
-    });
+    // const marker = new google.maps.Marker({
+    //   position: coords,
+    //   map,
+    //   title: "New Pin",
+    // });
 
     // Close the current InfoWindow.
     // Create a new InfoWindow.
