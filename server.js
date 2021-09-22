@@ -60,7 +60,7 @@ app.get("/", (req, res) => {
 app.get("/my-maps", (req, res) => {
   combinedQueries.getMyMaps(1)
     .then(maps => {
-      console.log(maps);
+      // console.log(maps);
       // This is a little ugly again, but gets us the full functionality
       // on a single page load by preloading all the different queries
       // we will require.
@@ -76,6 +76,17 @@ app.get("/my-maps", (req, res) => {
             })
         })
     });
+});
+
+app.post("/new-authorization", (req, res) => {
+  console.log('req.body has value:',req.body);
+  const {email, map_id} = req.body;
+  console.log(`\n\n query here: SELECT ... with email ${email} and map_id ${map_id}\n\n`);
+  mapQueries.insertAuthorization(map_id, email)
+    .then( newAuth => {
+      console.log(`Added to authorizations DB: ${newAuth}`);
+      res.redirect('/my-maps');
+    })
 });
 
 app.get("/some-temp", (req, res) => {
