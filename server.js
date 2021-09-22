@@ -73,7 +73,7 @@ app.get("/profile", (req, res) => {
   userQueries.getUserById(1)
     .then(user => {
       console.log(user);
-      res.render("profile", {user});
+      res.render("profile", { user });
     })
 });
 
@@ -81,18 +81,18 @@ app.get("/test-map:map_id", (req, res) => {
   mapQueries.getMapById(req.params.map_id)
     .then(map => {
       const key = process.env.MAP_API_KEY;
-      res.render('map-without-iframe/test-map-original', {map, key});
+      res.render('map-without-iframe/test-map-original', { map, key });
     })
 });
 
-app.get("/:map_id", (req, res) => {
-  mapQueries.getMapById(req.params.map_id)
-    .then((map) => {
-      // res.json(map);
-      const key = process.env.MAP_API_KEY;
-      res.render('view-map', { map, key });
-    });
-});
+// app.get("/:map_id", (req, res) => {
+//   mapQueries.getMapById(req.params.map_id)
+//     .then((map) => {
+//       // res.json(map);
+//       const key = process.env.MAP_API_KEY;
+//       res.render('view-map', { map, key });
+//     });
+// });
 
 app.listen(PORT, () => {
   console.log(`Example app listening on port ${PORT}`);
