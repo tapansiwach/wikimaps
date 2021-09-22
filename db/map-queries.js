@@ -42,11 +42,24 @@ const insertMap = (owner_id, title, city, lat, long, zoom, created_on, modified_
     });
 };
 
+const insertAuthorization = (map_id, email) => {
+  return db.query(`INSERT INTO authorizations (user_id, map_id)
+                    SELECT users.id, $1 as map_id
+                    FROM users
+                    WHERE users.email = $2
+                    RETURNING *;
+  `, [map_id, email])
+    .then( response => {
+      return response.rows[0];
+    })
+}
+
 
 
 module.exports = {
   getMaps,
   getMapById,
   getAuthorizedUsersByMap,
-  insertMap
+  insertMap,
+  insertAuthorization
 };
