@@ -83,7 +83,7 @@ function initMap() {
     infoWindow = new google.maps.InfoWindow({
       position: mapsMouseEvent.latLng,
       content: `
-      <form class="new-pin" onsubmit="addPin(event)">
+      <form class="new-pin" method="post" action="/new-pin">
         <div class="mb-3"><input class="form-control " type="text" id="newPinTitle" aria-describedby="title"
             placeholder="Title..." name="title"></div>
         <div class="mb-3"><input class="form-control " type="text" id="newPinLatitude"

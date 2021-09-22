@@ -72,7 +72,7 @@ app.get("/my-maps", (req, res) => {
           userQueries.getFavoritesFromUser(1)
             .then(favorites => {
               const faveIds = userQueries.userFavoriteIDs(favorites);
-              res.render('my-maps', { maps, authMaps, favorites, faveIds})
+              res.render('my-maps', { maps, authMaps, favorites, faveIds })
             })
         })
     });
@@ -96,6 +96,11 @@ app.get("/test-map:map_id", (req, res) => {
       const key = process.env.MAP_API_KEY;
       res.render('map-without-iframe/test-map-original', { map, key });
     })
+});
+
+app.post("/new-pin", (req, res) => {
+  console.log(req.body);
+
 });
 
 // app.get("/:map_id", (req, res) => {
