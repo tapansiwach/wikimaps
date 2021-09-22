@@ -63,7 +63,7 @@
                             <td>
                               <% for (const user of map.collaborators) { %>
                                 <img class="rounded-circle me-2" width="30" height="30"
-                                  src="assets/img/avatars/avatar<%= (user.id % 5) + 1 %>.jpeg">
+                                  src="<%= user.profile_pic_url %>">
                                 <% } %>
                             </td>
                             <td>
