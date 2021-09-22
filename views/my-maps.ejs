@@ -20,13 +20,15 @@
                   <h5 class="modal-title" id="exampleModalLabel">Share map with user</h5>
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <form id="exampleModalData">
+                <form id="exampleModalData" method="POST" action="/new-authorization">
                   <div class="modal-body">
                     <label for="exampleInputEmail1">Collaborator's email address:</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="user@email.here">
+                    <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="user@email.here">
+                    <input id="form_map_id" type="hidden" name="map_id" value="-1" />
                   </div>
                   <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <!-- <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Save changes</button> -->
                     <button type="button" class="btn btn-primary" onclick="addCollaborator()" data-bs-dismiss="modal">Save changes</button>
                   </div>
                 </form>
