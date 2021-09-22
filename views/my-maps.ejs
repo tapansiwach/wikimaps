@@ -102,7 +102,11 @@
                                     <td><img class="rounded-circle me-2" width="30" height="30" src="<%=authMap.owner_pic%>"><%=authMap.owner_first%> <%=authMap.owner_last%></td>
                                     <td><%=authMap.title%></td>
                                     <td><%=authMap.city%> </td>
+                                    <% if (faveIds.includes(authMap.id)) { %>
+                                      <td><i class="fa fa-heart" style="color: rgb(231,74,58);"></i></td>
+                                      <% } else { %>
                                     <td><i class="fa fa-heart-o"></i></td>
+                                    <% } %>
                                     <td><%= authMap.modified_on.getFullYear() + "/" + authMap.modified_on.getMonth() + "/" +
                                       authMap.modified_on.getDate() %> </td>
                                     <td><a class="btn btn-warning btn-icon-split" role="button"><span

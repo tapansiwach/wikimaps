@@ -66,12 +66,13 @@ app.get("/my-maps", (req, res) => {
       // we will require.
       userQueries.getAuthorizedMapsByUser(1)
         .then(authMaps => {
-          // This is getting out of hand. Now there are two of them.
+          // This is getting out of hand. Now there are three of them.
           // Promises were supposed to fix callback hell, not join them!
           // Maybe we should refactor this to using async / await instead?
           userQueries.getFavoritesFromUser(1)
             .then(favorites => {
-              res.render('my-maps', { maps, authMaps, favorites })
+              const faveIds = userQueries.userFavoriteIDs(favorites);
+              res.render('my-maps', { maps, authMaps, favorites, faveIds})
             })
         })
     });

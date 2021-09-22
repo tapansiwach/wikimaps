@@ -1,3 +1,4 @@
+const { response } = require('express');
 const db = require('./db');
 
 const getUsers = () => {
@@ -39,6 +40,14 @@ const getFavoritesFromUser = (user_id) => {
     })
 }
 
+const userFavoriteIDs = (arr) => {
+  const ids = [];
+  for (const element of arr) {
+    ids.push(element.id);
+  }
+  return ids;
+}
+
 const getAuthorizedMapsByUser = (user_id) => {
   return db.query(`SELECT maps.*, u2.first_name as owner_first, u2.last_name as owner_last, u2.profile_pic_url as owner_pic
                     FROM users u1
@@ -57,5 +66,6 @@ module.exports = {
   getUserById,
   getMapsByOwner,
   getFavoritesFromUser,
+  userFavoriteIDs,
   getAuthorizedMapsByUser
 };
