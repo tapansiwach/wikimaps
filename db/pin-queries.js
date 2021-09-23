@@ -28,8 +28,8 @@ const getPinsByMap = (map_id) => {
 
 const addPin = (pin) => {
   return db.query(`
-  INSERT INTO pins (title, description, img_url, lat, long, map_id)
-  VALUES ($1, $2, $3, $4, $5, $6);
+  INSERT INTO pins (title, description, img_url, lat, long, map_id, user_id)
+  VALUES ($1, $2, $3, $4, $5, $6, 1);
   `, [pin.title, pin.description, pin.image_url, pin.latitude, pin.longitude, pin.map_id]);
 }
 

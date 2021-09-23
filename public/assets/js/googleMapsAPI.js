@@ -35,11 +35,11 @@ function initMap() {
     marker.addListener('click', () => {
       const infoWindow = new google.maps.InfoWindow({
         content: `
-        <h2>${pin.title}</h2>
-        <img src="${pin.img_url}" alt="">
-        <p>${pin.description}</p>
+        <h3 class="text-dark mb-4">${pin.title}</h3>
+        <img src="${pin.img_url}" alt="iamge of pinned location" height="300px">
+        <p class="text-primary m-0 fw-bold">${pin.description}</p>
         `,
-      })
+      });
 
       infoWindow.open(map, marker);
     });
@@ -75,7 +75,7 @@ function initMap() {
             aria-describedby="description" placeholder="Description..." name="description"></div>
         <div class="mb-3"><input class="form-control " type="text" id="newPinImageUrl"
             aria-describedby="image-url" placeholder="Url for Image..." name="image_url"></div>
-        <input type="hidden" name="map_id" value="${this.id}">
+        <input type="hidden" name="map_id" value="${data.id}">
 
         <button class="btn btn-primary d-block btn-user w-100" type="submit">Create
           Pin</button>
