@@ -94,7 +94,7 @@ INSERT INTO users (user_name, first_name, last_name, email, profile_pic_url) VAL
 INSERT INTO users (user_name, first_name, last_name, email, profile_pic_url) VALUES ('bvaudin21','Bendix','Vaudin','bvaudin21@answers.com','https://i.imgur.com/aeS7PIE.jpg');
 INSERT INTO users (user_name, first_name, last_name, email, profile_pic_url) VALUES ('tlyford22','Timmie','Lyford','tlyford22@fc2.com','https://i.imgur.com/0DXLNKO.jpg');
 INSERT INTO users (user_name, first_name, last_name, email, profile_pic_url) VALUES ('nminall23','Nikita','Minall','nminall23@naver.com','https://i.imgur.com/7rtA2hm.jpg');
-INSERT INTO users (user_name, first_name, last_name, email, profile_pic_url) VALUES ('bfarncomb24','Brenna','Farncomb','bfarncomb24@netvibes.com','https://i.imgur.com/WUpm5Kv.jpg');
-INSERT INTO users (user_name, first_name, last_name, email, profile_pic_url) VALUES ('aduckerin25','Albina','Duckerin','aduckerin25@china.com.cn','https://i.imgur.com/aVYJm1N.jpg');
-INSERT INTO users (user_name, first_name, last_name, email, profile_pic_url) VALUES ('wserjeant26','William','Serjeant','wserjeant26@furl.net','https://i.imgur.com/poOvQrA.jpg');
-INSERT INTO users (user_name, first_name, last_name, email, profile_pic_url) VALUES ('ccubley27','Candis','Cubley','ccubley27@cbslocal.com','https://i.imgur.com/wV1YvNp.jpg');
+INSERT INTO users (user_name, first_name, last_name, email, profile_pic_url) VALUES ('bfarncomb24','Brenna','Farncomb','user3@example.com','https://i.imgur.com/60WSpca.jpg');
+INSERT INTO users (user_name, first_name, last_name, email, profile_pic_url) VALUES ('aduckerin25','Albina','Duckerin','user2@example.com','https://i.imgur.com/tE22OZF.jpg');
+INSERT INTO users (user_name, first_name, last_name, email, profile_pic_url) VALUES ('wserjeant26','William','Serjeant','user1@example.com','https://i.imgur.com/99th6SO.jpg');
+INSERT INTO users (user_name, first_name, last_name, email, profile_pic_url) VALUES ('spiderman','Peter','Parker','spiderman@marvel.com','https://i.pinimg.com/236x/79/10/d8/7910d806a0c721deaa6bea51dd53a132--graphic-design-art-peter-otoole.jpg');

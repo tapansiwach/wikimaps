@@ -1,4 +1,4 @@
-INSERT INTO maps (owner_id, title, city, lat, long, zoom, created_on, modified_on) VALUES (1,'Troll sighting locations','Skaun',63.20418,9.93994,15,'2020-04-13','2021-09-06');
+INSERT INTO maps (owner_id, title, city, lat, long, zoom, created_on, modified_on) VALUES (1,'Bigfoot sightings','Skaun',63.20418,9.93994,15,'2020-04-13','2021-09-06');
 INSERT INTO maps (owner_id, title, city, lat, long, zoom, created_on, modified_on) VALUES (1,'Interesting warehouses','Gadhada',21.02170,71.74800,15,'2018-11-07','2021-09-06');
 INSERT INTO maps (owner_id, title, city, lat, long, zoom, created_on, modified_on) VALUES (12,'Dinosaur sightings','Isla del Coco',5.53057,-87.06094,15,'2017-05-13','2021-09-15');
 INSERT INTO maps (owner_id, title, city, lat, long, zoom, created_on, modified_on) VALUES (15,'TU Running Trails','San Antonio',29.46245,-98.48298,15,'2020-01-21','2021-09-14');
@@ -10,7 +10,7 @@ INSERT INTO maps (owner_id, title, city, lat, long, zoom, created_on, modified_o
 INSERT INTO maps (owner_id, title, city, lat, long, zoom, created_on, modified_on) VALUES (6,'Excellent diving spots','Utila',16.09316,-86.89341,17,'2020-06-17','2021-09-10');
 INSERT INTO maps (owner_id, title, city, lat, long, zoom, created_on, modified_on) VALUES (5,'hac habitasse','Tangkanpulit',70.44154,38.26019,12,'2021-03-04','2021-09-10');
 INSERT INTO maps (owner_id, title, city, lat, long, zoom, created_on, modified_on) VALUES (20,'lectus vestibulum quam sapien','Kilju',40.50102,87.81992,16,'2020-03-20','2021-09-13');
-INSERT INTO maps (owner_id, title, city, lat, long, zoom, created_on, modified_on) VALUES (1,'condimentum neque','Joinville',20.52314,14.86697,14,'2019-05-28','2021-09-10');
+INSERT INTO maps (owner_id, title, city, lat, long, zoom, created_on, modified_on) VALUES (1,'Nothing supernatural here','Forks',47.94273,-124.40134,17,'2019-05-28','2021-09-10');
 INSERT INTO maps (owner_id, title, city, lat, long, zoom, created_on, modified_on) VALUES (4,'sapien iaculis','Matelândia',65.86346,45.3114,13,'2017-07-05','2021-09-05');
 INSERT INTO maps (owner_id, title, city, lat, long, zoom, created_on, modified_on) VALUES (14,'congue diam','Baishan',43.49499,8.88726,16,'2020-09-23','2021-09-07');
 INSERT INTO maps (owner_id, title, city, lat, long, zoom, created_on, modified_on) VALUES (4,'eu orci mauris lacinia','Drammen',13.21194,42.39282,12,'2018-12-23','2021-09-02');
@@ -19,7 +19,7 @@ INSERT INTO maps (owner_id, title, city, lat, long, zoom, created_on, modified_o
 INSERT INTO maps (owner_id, title, city, lat, long, zoom, created_on, modified_on) VALUES (19,'vivamus in','Liulihe',85.88652,8.5445,13,'2017-03-06','2021-09-17');
 INSERT INTO maps (owner_id, title, city, lat, long, zoom, created_on, modified_on) VALUES (12,'molestie hendrerit at','Jarinu',64.57059,76.85283,14,'2017-03-03','2021-09-06');
 INSERT INTO maps (owner_id, title, city, lat, long, zoom, created_on, modified_on) VALUES (9,'nam congue risus semper','Gajiram',6.84699,51.77371,13,'2018-11-25','2021-09-17');
-INSERT INTO maps (owner_id, title, city, lat, long, zoom, created_on, modified_on) VALUES (1,'orci nullam','Bandungsari',46.55577,37.35746,14,'2018-03-30','2021-09-04');
+INSERT INTO maps (owner_id, title, city, lat, long, zoom, created_on, modified_on) VALUES (1,'Great picnic areas','Bandungsari',46.55577,37.35746,14,'2018-03-30','2021-09-04');
 INSERT INTO maps (owner_id, title, city, lat, long, zoom, created_on, modified_on) VALUES (7,'consequat nulla nisl nunc','Agustín Codazzi',25.92889,69.17491,14,'2018-10-06','2021-09-05');
 INSERT INTO maps (owner_id, title, city, lat, long, zoom, created_on, modified_on) VALUES (2,'dui proin leo odio','Fujinomiya',13.2641,63.81284,16,'2019-12-02','2021-09-14');
 INSERT INTO maps (owner_id, title, city, lat, long, zoom, created_on, modified_on) VALUES (2,'mus etiam vel','Odienné',17.60339,56.11106,12,'2021-03-29','2021-09-15');
@@ -29,7 +29,7 @@ INSERT INTO maps (owner_id, title, city, lat, long, zoom, created_on, modified_o
 INSERT INTO maps (owner_id, title, city, lat, long, zoom, created_on, modified_on) VALUES (19,'volutpat dui','Kristiansund N',17.0107,87.63454,14,'2017-12-27','2021-09-02');
 INSERT INTO maps (owner_id, title, city, lat, long, zoom, created_on, modified_on) VALUES (18,'ornare imperdiet sapien urna','Osek nad Bečvou',37.50694,63.20183,16,'2021-02-22','2021-09-12');
 INSERT INTO maps (owner_id, title, city, lat, long, zoom, created_on, modified_on) VALUES (12,'praesent blandit','Bardīyah',54.9339,11.96745,12,'2021-07-08','2021-09-16');
-INSERT INTO maps (owner_id, title, city, lat, long, zoom, created_on, modified_on) VALUES (1,'amet diam in','Pushkino',74.12474,3.88516,16,'2021-02-20','2021-09-03');
+INSERT INTO maps (owner_id, title, city, lat, long, zoom, created_on, modified_on) VALUES (1,'Chill cafes','Pushkino',74.12474,3.88516,16,'2021-02-20','2021-09-03');
 INSERT INTO maps (owner_id, title, city, lat, long, zoom, created_on, modified_on) VALUES (16,'dolor vel est donec','Simpang Ulim',67.67697,21.9658,14,'2017-05-27','2021-09-14');
 INSERT INTO maps (owner_id, title, city, lat, long, zoom, created_on, modified_on) VALUES (15,'praesent blandit','Ballivor',75.04157,58.64906,13,'2020-09-16','2021-09-18');
 INSERT INTO maps (owner_id, title, city, lat, long, zoom, created_on, modified_on) VALUES (16,'diam erat fermentum','Guayabal',78.89131,5.59762,12,'2021-01-24','2021-09-16');
@@ -79,8 +79,8 @@ INSERT INTO maps (owner_id, title, city, lat, long, zoom, created_on, modified_o
 INSERT INTO maps (owner_id, title, city, lat, long, zoom, created_on, modified_on) VALUES (6,'tincidunt lacus','Lysá nad Labem',64.25044,62.64141,12,'2017-06-15','2021-09-11');
 INSERT INTO maps (owner_id, title, city, lat, long, zoom, created_on, modified_on) VALUES (18,'aliquet maecenas','Biguaçu',70.35108,3.69026,14,'2019-01-27','2021-09-10');
 INSERT INTO maps (owner_id, title, city, lat, long, zoom, created_on, modified_on) VALUES (19,'ullamcorper purus sit','Saki',70.37126,62.30555,14,'2018-04-10','2021-09-02');
-INSERT INTO maps (owner_id, title, city, lat, long, zoom, created_on, modified_on) VALUES (1,'turpis enim blandit','Burujul',67.39299,34.57879,12,'2020-10-15','2021-09-02');
-INSERT INTO maps (owner_id, title, city, lat, long, zoom, created_on, modified_on) VALUES (1,'eget tincidunt eget tempus','Xiexiong',75.34301,26.30789,13,'2018-12-08','2021-09-02');
+INSERT INTO maps (owner_id, title, city, lat, long, zoom, created_on, modified_on) VALUES (1,'Ferris Bueller scene locations','Chicago',67.39299,34.57879,12,'2020-10-15','2021-09-02');
+INSERT INTO maps (owner_id, title, city, lat, long, zoom, created_on, modified_on) VALUES (1,'My favorite used book stores','Seattle',75.34301,26.30789,13,'2018-12-08','2021-09-02');
 INSERT INTO maps (owner_id, title, city, lat, long, zoom, created_on, modified_on) VALUES (9,'eget elit sodales scelerisque','Chai Badan',8.12454,67.27066,12,'2019-08-13','2021-09-05');
 INSERT INTO maps (owner_id, title, city, lat, long, zoom, created_on, modified_on) VALUES (4,'ultrices posuere','Pasirpanjang',72.92718,37.72825,16,'2018-12-05','2021-09-09');
 INSERT INTO maps (owner_id, title, city, lat, long, zoom, created_on, modified_on) VALUES (20,'vehicula consequat morbi a','Huilong',63.68418,24.16751,12,'2020-01-21','2021-09-06');
