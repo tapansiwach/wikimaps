@@ -117,10 +117,12 @@ app.get("/test-map:map_id", (req, res) => {
 
 app.post("/new-pin", (req, res) => {
   console.log(req.body);
-  res.json(req.body);
-  // pinQueries.addPin(req.body)
-  // .then(result => {
-  //   });
+  // res.json(req.body);
+  pinQueries.addPin(req.body)
+  .then(result => {
+    console.log(`Added new pin with data: ${result}`);
+    res.redirect(`/test-map${result.map_id}`)
+    });
 });
 
 // app.get("/:map_id", (req, res) => {
