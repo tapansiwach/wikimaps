@@ -62,14 +62,14 @@
                       </thead>
                       <tbody>
                         <% for (const map of maps) { %>
-                          <tr data-mapId="<%= map.id %>">
+                          <tr >
                             <td>
                               <% for (const user of map.collaborators) { %>
                                 <img class="rounded-circle me-2" width="30" height="30"
                                   src="<%= user.profile_pic_url %>">
                                 <% } %>
                             </td>
-                            <td>
+                            <td class="dataholder_title" data-mapId="<%= map.id %>">
                               <%= map.title %>
                             </td>
                             <td>
