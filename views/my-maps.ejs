@@ -62,7 +62,7 @@
                       </thead>
                       <tbody>
                         <% for (const map of maps) { %>
-                          <tr >
+                          <tr>
                             <td>
                               <% for (const user of map.collaborators) { %>
                                 <img class="rounded-circle me-2" width="30" height="30"
@@ -126,12 +126,12 @@
                       </thead>
                       <tbody>
                         <% for (const authMap of authMaps) { %>
-                          <tr data-mapId="<%= authMap.id %>">
+                          <tr>
                             <td><img class="rounded-circle me-2" width="30" height="30" src="<%=authMap.owner_pic%>">
                               <%=authMap.owner_first%>
                                 <%=authMap.owner_last%>
                             </td>
-                            <td>
+                            <td class="dataholder_title" data-mapId="<%= authMap.id %>">
                               <%=authMap.title%>
                             </td>
                             <td>
@@ -191,21 +191,19 @@
                       </thead>
                       <tbody>
                         <% for( const fave of favorites ) { %>
-                          <tr> data-mapId="<%= fave.id %> "
-                              <td><img class="rounded-circle me-2" width="30" height="30" src="<%=fave.owner_pic%>">
-                                <%=fave.owner_first%>
-                                  <%=fave.owner_last%>
-                              </td>
-                              <td>
-                                <%= fave.title %>
-                              </td>
-                              <td>
-                                <%= fave.city %>
-                              </td>
-                              <td><i class="fas fa-heart" style="color: rgb(231,74,58);"></i></td>
-
+                          <tr>
+                            <td><img class="rounded-circle me-2" width="30" height="30" src="<%=fave.owner_pic%>">
+                              <%=fave.owner_first%>
+                                <%=fave.owner_last%>
+                            </td>
+                            <td class="dataholder_title" data-mapId="<%= fave.id %>">
+                              <%= fave.title %>
+                            </td>
+                            <td>
+                              <%= fave.city %>
+                            </td>
+                            <td><i class="fas fa-heart" style="color: rgb(231,74,58);"></i></td>
                           </tr>
-
                           <% } %>
 
                       </tbody>
