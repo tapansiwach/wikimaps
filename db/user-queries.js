@@ -61,11 +61,23 @@ const getAuthorizedMapsByUser = (user_id) => {
     });
 };
 
+const removeAuthorization = (user_id, map_id) => {
+  return db.query(`DELETE FROM authorizations
+                  WHERE user_id = $1
+                  AND map_id = $2
+                  RETURNING *;
+  `, [user_id, map_id])
+    .then( response => {
+      return response.rows;
+    });
+};
+
 module.exports = {
   getUsers,
   getUserById,
   getMapsByOwner,
   getFavoritesFromUser,
   userFavoriteIDs,
-  getAuthorizedMapsByUser
+  getAuthorizedMapsByUser,
+  removeAuthorization
 };

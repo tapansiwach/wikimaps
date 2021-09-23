@@ -126,7 +126,7 @@
             </div>
 
             <!-- Collaborating on: -->
-            <div class="container-fluid" style="margin: 0px 0px 24px;">
+            <div id="my-collabs" class="container-fluid" style="margin: 0px 0px 24px;">
               <div class="card shadow">
                 <div class="card-header py-3">
                   <p class="text-primary m-0 fw-bold">Collaborating On</p>
@@ -135,6 +135,10 @@
 
                   <div class="table-responsive table mt-2" id="dataTable-1" role="grid"
                     aria-describedby="dataTable_info">
+                    <form id="remove-authorization-form" method="POST" action="/remove-authorization">
+                      <input id="remove-authorization-form_map_id" type="hidden" name="map_id" value="-1" />
+                    </form>
+
                     <table class="table my-0" id="dataTable">
                       <thead>
                         <tr>
@@ -168,7 +172,7 @@
                                     <%= authMap.modified_on.getFullYear() + "/" + authMap.modified_on.getMonth() + "/" +
                                       authMap.modified_on.getDate() %>
                                   </td>
-                                  <td><a class="btn btn-warning btn-icon-split" role="button"><span
+                                  <td><a class="btn btn-warning btn-icon-split" role="button" onclick="unlinkFunc( <%= authMap.id %> )"><span
                                         class="text-white-50 icon"><i class="fas fa-unlink"></i></span><span
                                         class="text-white text">Unlink</span></a></td>
                           </tr>

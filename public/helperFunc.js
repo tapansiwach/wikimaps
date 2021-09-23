@@ -24,3 +24,12 @@ function addCollaborator() {
   modal.querySelector('#exampleModalData').submit();
 
 }
+
+function unlinkFunc(map_id) {
+  console.log(`Clicked the Unlink button for id: ${map_id}`);
+
+  const unlinkForm = document.getElementById('remove-authorization-form');
+  document.getElementById('remove-authorization-form_map_id').value = map_id;
+  unlinkForm.submit();
+
+}

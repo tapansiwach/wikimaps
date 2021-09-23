@@ -82,12 +82,23 @@ app.get("/my-maps", (req, res) => {
 app.post("/new-authorization", (req, res) => {
   console.log('req.body has value:', req.body);
   const { email, map_id } = req.body;
-  console.log(`\n\n query here: SELECT ... with email ${email} and map_id ${map_id}\n\n`);
+  // console.log(`\n\n query here: SELECT ... with email ${email} and map_id ${map_id}\n\n`);
   mapQueries.insertAuthorization(map_id, email)
     .then(newAuth => {
       console.log(`Added to authorizations DB: ${newAuth}`);
       res.redirect('/my-maps');
     })
+});
+
+app.post('/remove-authorization', (req, res) => {
+  console.log('req.body is: ', req.body);
+  const {map_id} = req.body;
+  console.log('This is where we remove authorization by removing user form table.');
+  userQueries.removeAuthorization(1, map_id)
+    .then(deleted => {
+      console.log("Deleted this map authorization: ",deleted);
+      res.redirect('/my-maps#my-collabs');
+    });
 });
 
 app.get("/some-temp", (req, res) => {
