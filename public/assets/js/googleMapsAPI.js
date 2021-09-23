@@ -17,16 +17,38 @@ function initMap() {
     zoom: data.zoom,
     center: mapLatLng,
   });
-  // Create the initial InfoWindow.
-  let infoWindow = new google.maps.InfoWindow({
-    content: `Add a Pin by clicking the map`,
-    position: mapLatLng,
-  });
+  // // Create the initial InfoWindow.
+  // let infoWindow = new google.maps.InfoWindow({
+  //   content: `Add a Pin by clicking the map`,
+  //   position: mapLatLng,
+  // });
 
-  infoWindow.open(map);
+  // infoWindow.open(map);
+
+  // display the pins on the map
+  for (const pin of data.pins) {
+    const marker = new google.maps.Marker({
+      position: { lat: pin.lat, lng: pin.long },
+      map: map
+    });
+
+    marker.addListener('click', () => {
+      const infoWindow = new google.maps.InfoWindow({
+        content: `
+        <h2>${pin.title}</h2>
+        <img src="${pin.img_url}" alt="">
+        <p>${pin.description}</p>
+        `,
+      })
+
+      infoWindow.open(map, marker);
+    });
+
+  }
+
   // Configure the click listener.
   map.addListener("click", (mapsMouseEvent) => {
-    infoWindow.close();
+    // infoWindow.close();
 
     const coords = mapsMouseEvent.latLng.toJSON();
     console.log(coords);
