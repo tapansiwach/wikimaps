@@ -1,24 +1,28 @@
-LHL Node Skeleton
+Wikimaps
 =========
 
-## Project Setup
+## Project Summary
+Wikimaps is a platform where users can create shared maps. 
 
-The following steps are only for _one_ of the group members to perform.
-
-1. Create your own copy of this repo using the `Use This Template` button, ideally using the name of your project. The repo should be marked Public
-2. Verify that the skeleton code now shows up in your repo on GitHub, you should be automatically redirected
-3. Clone your copy of the repo to your dev machine
-4. Add your team members as collaborators to the project so that they can push to this repo
-5. Let your team members know the repo URL so that they use the same repo (they should _not_ create a copy/fork of this repo since that will add additional workflow complexity to the project)
-
+## Screenshots
+### Add A Pin To Map
+!["Add A Pin To Map"](./screenshots/add_a_pin_to_map.png)
+### Pin Information
+!["Pin Information"](./screenshots/pin_information.png)
+### All Maps
+!["All Maps"](./screenshots/all_maps.png)
+### Maps Created By You
+!["Maps Created By You"](./screenshots/maps_created_by_you.png)
+### Maps You Are Collaborating On
+!["Maps You Are Collaborating On"](./screenshots/maps_you_are_collaborating_on.png)
 
 ## Getting Started
 
 1. Create the `.env` by using `.env.example` as a reference: `cp .env.example .env`
-2. Update the .env file with your correct local information 
-  - username: `labber` 
-  - password: `labber` 
-  - database: `midterm`
+2. Update the .env file with your correct local information, for example 
+  - username: `mapper` 
+  - password: `mapper` 
+  - database: `wikimaps`
 3. Install dependencies: `npm i`
 4. Fix to binaries for sass: `npm rebuild node-sass`
 5. Reset database: `npm run db:reset`
